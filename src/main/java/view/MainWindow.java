@@ -109,20 +109,18 @@ private void exportMonsters() {
     fileChooser.addChoosableFileFilter(jsonFilter);
     fileChooser.addChoosableFileFilter(xmlFilter);
     fileChooser.addChoosableFileFilter(yamlFilter);
-    fileChooser.setFileFilter(jsonFilter); // устанавливаем начальный фильтр
+    fileChooser.setFileFilter(jsonFilter); 
     fileChooser.setAcceptAllFileFilterUsed(false);
     
 if (fileChooser.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
         File file = fileChooser.getSelectedFile();
         String path = file.getPath();
         
-        // Определяем расширение на основе выбранного фильтра
         String extension = "";
         if (fileChooser.getFileFilter() instanceof FileNameExtensionFilter) {
             FileNameExtensionFilter filter = (FileNameExtensionFilter) fileChooser.getFileFilter();
             extension = filter.getExtensions()[0];
             
-            // Добавляем расширение, если его нет
             if (!path.toLowerCase().endsWith("." + extension)) {
                 path += "." + extension;
             }

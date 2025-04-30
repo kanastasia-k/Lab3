@@ -26,11 +26,9 @@ public class MonsterInfoDialog extends JDialog {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.insets = new Insets(5, 5, 5, 5);
 
-        // Редактируемое поле имени
         addField(panel, gbc, "Name:", new JTextField(monster.getName(), 20), 
             e -> monster.setName(((JTextField)e.getSource()).getText()));
 
-        // Нередактируемые поля
         addLabel(panel, gbc, "ID:", formatNumber(monster.getId()));
         addLabel(panel, gbc, "Description:", monster.getDescription());
         addLabel(panel, gbc, "Function:", monster.getFunction());
