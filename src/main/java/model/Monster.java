@@ -4,6 +4,7 @@
  */
 package model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,9 +60,9 @@ public class Monster {
     public void setHabitat(String habitat) { this.habitat = habitat; }
     public String getFirstMention() { return firstMention; }
     public void setFirstMention(String date) {
-    if (date != null && !date.matches("\\d{4}-\\d{2}-\\d{2}")) {
-        throw new IllegalArgumentException("Неверный формат даты");
-    }
+//    if (date != null && !date.matches("\\d{4}-\\d{2}-\\d{2}")) {
+//        throw new IllegalArgumentException("Неверный формат даты");
+//    }
     this.firstMention = date;
 }
     public List<String> getImmunities() { return immunities; }

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<bestiarum>
+	<monster>
+		<id>1</id>
+		<name>Леший</name>
+		<description>Гибрид человека и лесного духа</description>
+		<function>Охрана древних рощ</function>
+		<danger>7</danger>
+		<habitat>Чащи Брокилона и Эдингеля</habitat>
+		<first_mention>1234-06-21</first_mention>
+		<immunity>Магия</immunity>
+		<immunity>Оглушение</immunity>
+		<immunity>Яды</immunity>
+		<height>3</height>
+		<weight>300</weight>
+		<activity_time>Ночь</activity_time>
+		<recept>
+			<ingredient>Корень мандрагоры (3)</ingredient>
+			<ingredient>Пепел драконида (1)</ingredient>
+			<ingredient>Эссенция полыни</ingredient>
+			<preparation_time>60</preparation_time>
+			<effectiveness>Умеренная</effectiveness>
+		</recept>
+	</monster>
+	
+	<monster>
+		<id>2</id>
+		<name>Полуденница</name>
+		<description>Призрак</description>
+		<function>Терроризация полей во время жатвы</function>
+		<danger>5</danger>
+		<habitat>Поля Редании и амбары Туссента</habitat>
+		<first_mention>1198-07-15</first_mention>
+		<immunity>Световая магия</immunity>
+		<immunity>Кровотечение</immunity>
+		<weight>Неосязаем</weight>
+		<activity_time>День</activity_time>
+		<recept>
+			<ingredient>Лепестки лунного цветка (2)</ingredient>
+			<ingredient>Серебряная нить (1)</ingredient>
+			<ingredient>Экстракт чеснока</ingredient>
+			<preparation_time>30</preparation_time>
+			<effectiveness>Высокая</effectiveness>
+		</recept>
+	</monster>
+
+
+	<monster>
+		<id>3</id>
+		<name>Катакан</name>
+		<description>Крылатый демон с хвостом скорпиона</description>
+		<danger>9</danger>
+		<habitat>Горные пещеры Туссента</habitat>
+		<first_mention>1150-04-12</first_mention>
+		<immunity>Огонь</immunity>
+		<immunity>Яды</immunity>
+		<height>2</height>
+		<weight>200</weight>
+		<activity_time>Сумерки</activity_time>
+		<recept>
+			<ingredient>Жало мантикоры (4)</ingredient>
+			<ingredient>Нефритовая пыль (2)</ingredient>
+			<ingredient>Спирт Альберихта</ingredient>
+			<preparation_time>90</preparation_time>
+			<effectiveness>Средняя</effectiveness>
+		</recept>
+	</monster>
+
+	<monster>
+		<id>4</id>
+		<name>Кикимора</name>
+		<description>Болотная нежить из гниющих останков</description>
+		<danger>6</danger>
+		<habitat>Топи Вендена</habitat>
+		<first_mention>1221-09-03</first_mention>
+		<immunity>Земляная магия</immunity>
+		<immunity>Удушье</immunity>
+		<height>1</height>
+		<weight>15</weight>
+		<activity_time>Ночь</activity_time>
+		<recept>
+			<ingredient>Грибы-поганки (5)</ingredient>
+			<ingredient>Глаз василиска (1)</ingredient>
+			<ingredient>Роса папоротника (3)</ingredient>
+			<preparation_time>45</preparation_time>
+			<effectiveness>Средняя</effectiveness>
+		</recept>
+	</monster>
+
+	<monster>
+		<id>5</id>
+		<name>Элементаль льда</name>
+		<description>Дух вечной зимы</description>
+		<danger>10</danger>
+		<habitat>Ледники Ковира</habitat>
+		<first_mention>1105-12-01</first_mention>
+		<immunity>Заморозка</immunity>
+		<immunity>Дробление</immunity>
+		<height>5</height>
+		<weight>Не измерим</weight>
+		<activity_time>Всегда</activity_time>
+		<recept>
+			<ingredient>Сердце огненного элементаля (1)</ingredient>
+			<ingredient>Сера (3)</ingredient>
+			<ingredient>Расплавленное железо</ingredient>
+			<preparation_time>120</preparation_time>
+			<effectiveness>Переменная</effectiveness>
+		</recept>
+	</monster>
+
+	<monster>
+		<id>6</id>
+		<name>Кащей</name>
+		<description>Проклятый дух</description>
+		<danger>9</danger>
+		<habitat>Катакомбы Старой усадьбы</habitat>
+		<first_mention>876-04-12</first_mention>
+		<immunity>Старение</immunity>
+		<immunity>Яды</immunity>
+		<immunity>Обычное оружие</immunity>
+		<height>1.8</height>
+		<weight>45</weight>
+		<activity_time>Ночью</activity_time>
+		<recept>
+			<ingredient>Яйцо с его душой (1)</ingredient>
+			<ingredient>Серебряный кинжал (1)</ingredient>
+			<ingredient>Пепел вампира</ingredient>
+			<preparation_time>60</preparation_time>
+			<effectiveness>Абсолютная</effectiveness>
+		</recept>
+	</monster>
+
+	<monster>
+		<id>7</id>
+		<name>Полуночница</name>
+		<description>Призрак</description>
+		<danger>7</danger>
+		<habitat>Поля и луга</habitat>
+		<first_mention>943-08-19</first_mention>
+		<immunity>Ослепление</immunity>
+		<immunity>Кровотечение</immunity>
+		<immunity>Яды</immunity>
+		<immunity>Боль</immunity>
+		<height>1.5</height>
+		<weight>Неосязаема</weight>
+		<activity_time>Ночью</activity_time>
+		<recept>
+			<ingredient>Слезы невинной (3)</ingredient>
+			<ingredient>Зеркало, отразившее смерть (1)</ingredient>
+			<ingredient>Корень мандрагоры (1)</ingredient>
+			<preparation_time>33</preparation_time>
+			<effectiveness>Высокая</effectiveness>
+		</recept>
+	</monster>
+
+	<monster>
+		<id>8</id>
+		<name>Яга</name>
+		<description>Отвратительный монстр, похожий на старую уродливую женщину</description>
+		<danger>8</danger>
+		<habitat>Глухие чащобы Брокилона</habitat>
+		<first_mention>701-11-30</first_mention>
+		<immunity>Обычные яды</immunity>
+		<immunity>Нельзя сбить с ног</immunity>
+		<height>2.3</height>
+		<weight>90</weight>
+		<activity_time>Сумерки</activity_time>
+		<recept>
+			<ingredient>Кость невинно убитого (1)</ingredient>
+			<ingredient>Паутина старого паука (1)</ingredient>
+			<ingredient>Смола чёрного тополя (3)</ingredient>
+			<preparation_time>47</preparation_time>
+			<effectiveness>Средняя</effectiveness>
+		</recept>
+	</monster>
+
+	<monster>
+		<id>9</id>
+		<name>Фледер</name>
+		<description>Низший вампир</description>
+		<danger>9</danger>
+		<habitat>Вызима и её окрестности</habitat>
+		<first_mention>1267-05-14</first_mention>
+		<immunity>Оглушение</immunity>
+		<immunity>Контроль разума</immunity>
+		<height>1.9</height>
+		<weight>70</weight>
+		<activity_time>Ночью</activity_time>
+		<recept>
+			<ingredient>Серебряный клинок</ingredient>
+			<ingredient>Сердце вампира</ingredient>
+			<ingredient>Чеснок древних (3)</ingredient>
+			<preparation_time>90</preparation_time>
+			<effectiveness>Высокая</effectiveness>
+		</recept>
+	</monster>
+
+	<monster>
+		<id>10</id>
+		<name>Кокатрикс</name>
+		<description>Гибрид петуха и змеир</description>
+		<danger>8</danger>
+		<habitat>Заброшенные деревни и окраины кладбищ</habitat>
+		<first_mention>1022-03-18</first_mention>
+		<immunity>Яды</immunity>
+		<immunity>Паралич</immunity>
+		<immunity>Обычное оружие</immunity>
+		<height>1.2</height>
+		<weight>40</weight>
+		<activity_time>Днём</activity_time>
+		<recept>
+			<ingredient>Перо кокатрикса (1)</ingredient>
+			<ingredient>Яд гадюки (2)</ingredient>
+			<ingredient>Соль из святилища Мелителе</ingredient>
+			<preparation_time>55</preparation_time>
+			<effectiveness>Высокая</effectiveness>
+		</recept>
+	</monster>
+
+</bestiarum>

@@ -1,0 +1,198 @@
+bestiarum:
+  monster:
+    - id: 1
+      name: Леший
+      description: Гибрид человека и лесного духа
+      function: Охрана древних рощ
+      danger: 7
+      habitat: Чащи Брокилона и Эдингеля
+      first_mention: '1234-06-21'
+      immunity:
+        - Магия
+        - Оглушение
+        - Яды
+      height: 3
+      weight: 300
+      activity_time: Ночь
+      recept:
+        ingredient:
+          - Корень мандрагоры (3)
+          - Пепел драконида (1)
+          - Эссенция полыни
+        preparation_time: 60
+        effectiveness: Умеренная
+    - id: 2
+      name: Полуденница
+      description: Призрак
+      function: Терроризация полей во время жатвы
+      danger: 5
+      habitat: Поля Редании и амбары Туссента
+      first_mention: '1198-07-15'
+      immunity:
+        - Световая магия
+        - Кровотечение
+      weight: Неосязаем
+      activity_time: День
+      recept:
+        ingredient:
+          - Лепестки лунного цветка (2)
+          - Серебряная нить (1)
+          - Экстракт чеснока
+        preparation_time: 30
+        effectiveness: Высокая
+    - id: 3
+      name: Катакан
+      description: Крылатый демон с хвостом скорпиона
+      danger: 9
+      habitat: Горные пещеры Туссента
+      first_mention: '1150-04-12'
+      immunity:
+        - Огонь
+        - Яды
+      height: 2
+      weight: 200
+      activity_time: Сумерки
+      recept:
+        ingredient:
+          - Жало мантикоры (4)
+          - Нефритовая пыль (2)
+          - Спирт Альберихта
+        preparation_time: 90
+        effectiveness: Средняя
+    - id: 4
+      name: Кикимора
+      description: Болотная нежить из гниющих останков
+      danger: 6
+      habitat: Топи Вендена
+      first_mention: '1221-09-03'
+      immunity:
+        - Земляная магия
+        - Удушье
+      height: 1
+      weight: 15
+      activity_time: Ночь
+      recept:
+        ingredient:
+          - Грибы-поганки (5)
+          - Глаз василиска (1)
+          - Роса папоротника (3)
+        preparation_time: 45
+        effectiveness: Средняя
+    - id: 5
+      name: Элементаль льда
+      description: Дух вечной зимы
+      danger: 10
+      habitat: Ледники Ковира
+      first_mention: '1105-12-01'
+      immunity:
+        - Заморозка
+        - Дробление
+      height: 5
+      weight: Не измерим
+      activity_time: Всегда
+      recept:
+        ingredient:
+          - Сердце огненного элементаля (1)
+          - Сера (3)
+          - Расплавленное железо
+        preparation_time: 120
+        effectiveness: Переменная
+    - id: 6
+      name: Кащей
+      description: Проклятый дух
+      danger: 9
+      habitat: Катакомбы Старой усадьбы
+      first_mention: 876-04-12
+      immunity:
+        - Старение
+        - Яды
+        - Обычное оружие
+      height: 1.8
+      weight: 45
+      activity_time: Ночью
+      recept:
+        ingredient:
+          - Яйцо с его душой (1)
+          - Серебряный кинжал (1)
+          - Пепел вампира
+        preparation_time: 60
+        effectiveness: Абсолютная
+    - id: 7
+      name: Полуночница
+      description: Призрак
+      danger: 7
+      habitat: Поля и луга
+      first_mention: 943-08-19
+      immunity:
+        - Ослепление
+        - Кровотечение
+        - Яды
+        - Боль
+      height: 1.5
+      weight: Неосязаема
+      activity_time: Ночью
+      recept:
+        ingredient:
+          - Слезы невинной (3)
+          - Зеркало, отразившее смерть (1)
+          - Корень мандрагоры (1)
+        preparation_time: 33
+        effectiveness: Высокая
+    - id: 8
+      name: Яга
+      description: Отвратительный монстр, похожий на старую уродливую женщину
+      danger: 8
+      habitat: Глухие чащобы Брокилона
+      first_mention: 701-11-30
+      immunity:
+        - Обычные яды
+        - Нельзя сбить с ног
+      height: 2.3
+      weight: 90
+      activity_time: Сумерки
+      recept:
+        ingredient:
+          - Кость невинно убитого (1)
+          - Паутина старого паука (1)
+          - Смола чёрного тополя (3)
+        preparation_time: 47
+        effectiveness: Средняя
+    - id: 9
+      name: Фледер
+      description: Низший вампир
+      danger: 9
+      habitat: Вызима и её окрестности
+      first_mention: '1267-05-14'
+      immunity:
+        - Оглушение
+        - Контроль разума
+      height: 1.9
+      weight: 70
+      activity_time: Ночью
+      recept:
+        ingredient:
+          - Серебряный клинок
+          - Сердце вампира
+          - Чеснок древних (3)
+        preparation_time: 90
+        effectiveness: Высокая
+    - id: 10
+      name: Кокатрикс
+      description: Гибрид петуха и змеир
+      danger: 8
+      habitat: Заброшенные деревни и окраины кладбищ
+      first_mention: '1022-03-18'
+      immunity:
+        - Яды
+        - Паралич
+        - Обычное оружие
+      height: 1.2
+      weight: 40
+      activity_time: Днём
+      recept:
+        ingredient:
+          - Перо кокатрикса (1)
+          - Яд гадюки (2)
+          - Соль из святилища Мелителе
+        preparation_time: 55
+        effectiveness: Высокая
