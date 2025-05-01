@@ -58,7 +58,12 @@ public class Monster {
     public String getHabitat() { return habitat; }
     public void setHabitat(String habitat) { this.habitat = habitat; }
     public String getFirstMention() { return firstMention; }
-    public void setFirstMention(String firstMention) { this.firstMention = firstMention; }
+    public void setFirstMention(String date) {
+    if (date != null && !date.matches("\\d{4}-\\d{2}-\\d{2}")) {
+        throw new IllegalArgumentException("Неверный формат даты");
+    }
+    this.firstMention = date;
+}
     public List<String> getImmunities() { return immunities; }
     public void setImmunities(List<String> immunities) { this.immunities = immunities; }
     public int getHeight() { return height; }
@@ -90,7 +95,8 @@ public class Monster {
         public String getEffectiveness() { return effectiveness; }
         public void setEffectiveness(String effectiveness) { this.effectiveness = effectiveness; }
     }
-
+        
+    
     @Override
     public String toString() {
         return name;
