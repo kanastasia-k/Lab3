@@ -57,13 +57,31 @@ public class MainWindow extends JFrame {
         
         if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             File[] files = fileChooser.getSelectedFiles();
+            List<Monster> importedMonsters = new ArrayList<>();
+            List<String> errorMessages = new ArrayList<>();
             for (File file : files) {
+                try{
                 List<Monster> monsters = importHandler.handleImportFile(file.getPath());
                 if (!monsters.isEmpty()) {
                     monsterCollections.put(file.getName(), monsters);
+                    importedMonsters.addAll(monsters);
+                }
+                }catch (UnsupportedFormatException e){
+                    errorMessages.add(file.getName()+ ": " + e.getMessage());
                 }
             }
             updateTree();
+            if (!errorMessages.isEmpty()) {
+            String message = "Успешно импортировано: " + importedMonsters.size() + " монстров\n\n" +
+                           "Ошибки:\n" + String.join("\n", errorMessages);
+            
+            JOptionPane.showMessageDialog(this, message, "Результат импорта", 
+                importedMonsters.isEmpty() ? JOptionPane.ERROR_MESSAGE : JOptionPane.WARNING_MESSAGE);
+        } else if (!importedMonsters.isEmpty()) {
+            JOptionPane.showMessageDialog(this, 
+                "Успешно импортировано " + importedMonsters.size() + " монстров",
+                "Импорт завершен", JOptionPane.INFORMATION_MESSAGE);
+        }
         }
     }
 

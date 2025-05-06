@@ -13,5 +13,5 @@ import model.Monster;
  */
 public interface ImportHandler {
     void setNextHandler(ImportHandler nextHandler);
-    List<Monster> handleImportFile(String filePath);
+    List<Monster> handleImportFile(String filePath) throws UnsupportedFormatException;
 }

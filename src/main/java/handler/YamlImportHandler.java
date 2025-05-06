@@ -25,7 +25,7 @@ public class YamlImportHandler implements ImportHandler{
     }
 
     @Override
-    public List<Monster> handleImportFile(String filePath) {
+    public List<Monster> handleImportFile(String filePath) throws UnsupportedFormatException{
         if (filePath.toLowerCase().endsWith(".yml") || filePath.toLowerCase().endsWith(".yaml")) {
             try (FileInputStream inputStream = new FileInputStream(filePath)) {
                 Yaml yaml = new Yaml();
@@ -34,7 +34,6 @@ public class YamlImportHandler implements ImportHandler{
                 if (bestiarumObj == null) {
                     return new ArrayList<>();
                 }
-                
                 ObjectMapper mapper = new ObjectMapper();
                 String json = mapper.writeValueAsString(bestiarumObj);
                 Bestiarum bestiarum = mapper.readValue(json, Bestiarum.class);
@@ -50,6 +49,6 @@ public class YamlImportHandler implements ImportHandler{
         } else if (nextHandler != null) {
             return nextHandler.handleImportFile(filePath);
         }
-        return new ArrayList<>();
+        throw new UnsupportedFormatException("Формат файла не поддерживается: " + filePath);
     }
 }

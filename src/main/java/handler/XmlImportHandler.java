@@ -26,9 +26,8 @@ public class XmlImportHandler implements ImportHandler{
     }
 
     @Override
-    public List<Monster> handleImportFile(String filePath) {
+    public List<Monster> handleImportFile(String filePath) throws UnsupportedFormatException{
       if (filePath.toLowerCase().endsWith(".xml")){
-        ObjectMapper mapper = new ObjectMapper();
         try {
             JAXBContext context = JAXBContext.newInstance(Bestiarum.class);
                 Unmarshaller unmarshaller = context.createUnmarshaller();
@@ -46,6 +45,6 @@ public class XmlImportHandler implements ImportHandler{
       else if (nextHandler != null) {
             return nextHandler.handleImportFile(filePath);
         }
-        return new ArrayList<>();
+        throw new UnsupportedFormatException("Формат файла не поддерживается: " + filePath);
     }
 }

@@ -33,7 +33,7 @@ public class JsonImportHandler implements ImportHandler{
     }
 
     @Override
-    public List<Monster> handleImportFile(String filePath) {
+    public List<Monster> handleImportFile(String filePath) throws UnsupportedFormatException{
       if (filePath.toLowerCase().endsWith(".json")){
         try {
                 Bestiarum bestiarum = mapper.readValue(new File(filePath), Bestiarum.class);
@@ -49,7 +49,7 @@ public class JsonImportHandler implements ImportHandler{
         } else if (nextHandler != null) {
             return nextHandler.handleImportFile(filePath);
         }
-        return new ArrayList<>();
+        throw new UnsupportedFormatException("Формат файла не поддерживается: " + filePath);
     }
 }
 

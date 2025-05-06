@@ -35,12 +35,16 @@ public class JsonExportHandler implements ExportHandler {
                 mapper.writeValue(new File(filePath), monsters);
                 return true;
             } catch (Exception e) {
-                e.printStackTrace();
-                return false;
+                throw new RuntimeException("Не удалось сохранить файл: " + e.getMessage());
             }
         } else if (nextHandler != null) {
             return nextHandler.handleExportFile(filePath, monsters);
+        } else{
+            throw new IllegalArgumentException(
+                    "Неподдерживаемый формат файла.\n" +
+                    "Поддерживается только .json\n\n" +
+                    "Выбранный файл: " + filePath
+                );
         }
-        return false;
     }
 }
