@@ -38,7 +38,7 @@ public class YamlExportHandler implements ExportHandler {
     public boolean handleExportFile(String filePath, List<Monster> monsters) {
         if (filePath.toLowerCase().endsWith(".yml") || filePath.toLowerCase().endsWith(".yaml")) {
             try (FileWriter writer = new FileWriter(filePath)) {
-                // Формируем структуру для YAML вручную
+
                 Map<String, Object> bestiarumMap = new LinkedHashMap<>();
                 List<Map<String, Object>> monsterList = new ArrayList<>();
 

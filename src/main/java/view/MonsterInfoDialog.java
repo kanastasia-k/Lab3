@@ -31,28 +31,20 @@ public class MonsterInfoDialog extends JDialog {
         JPanel panel = new JPanel(new GridLayout(0, 2, 10, 5));
         panel.setBorder(new EmptyBorder(15, 15, 15, 15));
         
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.anchor = GridBagConstraints.WEST;
-        gbc.insets = new Insets(5, 5, 5, 5);
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-
-        addInfoField(panel, gbc, "ID:", String.valueOf(monster.getId()));
-        addEditableField(panel, gbc, "Имя:", monster.getName(), true);
-        addEditableField(panel, gbc, "Описание:", monster.getDescription(), true);
-        addEditableField(panel, gbc, "Функция:", monster.getFunction(), true);
-        addDangerField(panel, gbc, "Уровень опасности:", monster.getDanger(), 0, 10);
-        addEditableField(panel, gbc, "Место обитания:", monster.getHabitat(), true);
-        addDateField(panel, gbc,  "Первое упоминание:", monster.getFirstMention());
-        addEditableField(panel, gbc, "Иммунитет:", String.join(", ", monster.getImmunities()), true);
-        addHeightField(panel, gbc, "Рост:", monster.getHeight(), 0);
-        addEditableField(panel, gbc, "Вес:", monster.getWeight(), true);
-        addEditableField(panel, gbc, "Время активности:", monster.getActivityTime(), true);
+        addInfoField(panel, "ID:", String.valueOf(monster.getId()));
+        addEditableField(panel, "Имя:", monster.getName(), true);
+        addEditableField(panel, "Описание:", monster.getDescription(), true);
+        addEditableField(panel, "Функция:", monster.getFunction(), true);
+        addDangerField(panel, "Уровень опасности:", monster.getDanger(), 0, 10);
+        addEditableField(panel, "Место обитания:", monster.getHabitat(), true);
+        addDateField(panel,  "Первое упоминание:", monster.getFirstMention());
+        addEditableField(panel, "Иммунитет:", String.join(", ", monster.getImmunities()), true);
+        addHeightField(panel, "Рост:", monster.getHeight(), 0);
+        addEditableField(panel, "Вес:", monster.getWeight(), true);
+        addEditableField(panel, "Время активности:", monster.getActivityTime(), true);
         
-        addRecipeInfo(panel, gbc, monster.getRecipe());
+        addRecipeInfo(panel, monster.getRecipe());
 
-        
-        gbc.gridwidth = 2;
-        gbc.insets = new Insets(15, 0, 0, 0);
         JButton closeButton = new JButton("Close");
         closeButton.addActionListener(e -> dispose());
         
@@ -62,7 +54,7 @@ public class MonsterInfoDialog extends JDialog {
         add(new JScrollPane(panel));
     }
 
-    private void addEditableField(JPanel panel, GridBagConstraints gbc, String label, String value, boolean editable) {
+    private void addEditableField(JPanel panel, String label, String value, boolean editable) {
         panel.add(new JLabel(label));
         JTextField field = new JTextField(value != null ? value : "", 20);
         field.setEditable(editable);
@@ -72,7 +64,7 @@ public class MonsterInfoDialog extends JDialog {
         panel.add(field);
     }
 
-    private void addHeightField(JPanel panel, GridBagConstraints gbc, String label, int value, int min) {
+    private void addHeightField(JPanel panel, String label, int value, int min) {
         panel.add(new JLabel(label));
         JTextField field = new JTextField(String.valueOf(value), 5);
         field.addActionListener(e -> {
@@ -94,7 +86,7 @@ public class MonsterInfoDialog extends JDialog {
         panel.add(field);
     }
     
-    private void addDangerField(JPanel panel, GridBagConstraints gbc, String label, int value, int min, int max) {
+    private void addDangerField(JPanel panel, String label, int value, int min, int max) {
         panel.add(new JLabel(label));
         JTextField field = new JTextField(String.valueOf(value), 5);
         field.addActionListener(e -> {
@@ -116,26 +108,26 @@ public class MonsterInfoDialog extends JDialog {
         panel.add(field);
     }
 
-    private void addInfoField(JPanel panel, GridBagConstraints gbc, String label, String value) {
+    private void addInfoField(JPanel panel, String label, String value) {
         panel.add(new JLabel(label));
         panel.add(new JLabel(value != null ? value : "Unknown"));
     }
 
-    private void addRecipeInfo(JPanel panel,GridBagConstraints gbc, Recipe recipe) {
+    private void addRecipeInfo(JPanel panel, Recipe recipe) {
         if (recipe == null) {
-            addInfoField(panel, gbc, "Рецепт:", "No recipe available");
+            addInfoField(panel, "Рецепт:", "No recipe available");
             return;
         }
 
         panel.add(new JLabel("Рецепт:"));
         panel.add(new JLabel(""));
         
-        addInfoField(panel, gbc, "Ингредиенты:", String.join(", ", recipe.getIngredients()));
-        addInfoField(panel, gbc, "Время приготовления:", recipe.getPreparationTime() + " мин");
-        addInfoField(panel, gbc, "Эффективность:", recipe.getEffectiveness());
+        addInfoField(panel, "Ингредиенты:", String.join(", ", recipe.getIngredients()));
+        addInfoField(panel, "Время приготовления:", recipe.getPreparationTime() + " мин");
+        addInfoField(panel, "Эффективность:", recipe.getEffectiveness());
     }
     
-private void addDateField(JPanel panel, GridBagConstraints gbc, String label, String dateValue) {
+private void addDateField(JPanel panel, String label, String dateValue) {
     panel.add(new JLabel(label));
     
     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");

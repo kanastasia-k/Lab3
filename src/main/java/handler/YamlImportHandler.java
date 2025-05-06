@@ -34,7 +34,7 @@ public class YamlImportHandler implements ImportHandler{
                 if (bestiarumObj == null) {
                     return new ArrayList<>();
                 }
-                // Преобразуем bestiarumObj в JSON, затем в Bestiarium через Jackson
+                
                 ObjectMapper mapper = new ObjectMapper();
                 String json = mapper.writeValueAsString(bestiarumObj);
                 Bestiarum bestiarum = mapper.readValue(json, Bestiarum.class);
